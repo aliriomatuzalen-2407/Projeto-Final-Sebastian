@@ -1,0 +1,54 @@
+/* ==========================================================================
+   STYLE.CSS // HACKER CYBERPUNK TERMINAL
+   ========================================================================== */
+
+/* Variáveis do Tema */
+:root {
+  --primary-color: #00ff66;
+  --glow-color: rgba(0, 255, 102, 0.4);
+}
+
+body {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-family: 'Fira Code', monospace;
+}
+
+/* Linhas Scanline CRT */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Borda Neon Glow */
+.glow-box {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+.theme-border {
+  border-color: var(--primary-color);
+}
+
+.theme-bg {
+  background-color: var(--primary-color);
+}
+
+/* Scrollbar Customizada */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
